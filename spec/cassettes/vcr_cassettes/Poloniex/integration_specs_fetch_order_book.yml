@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://poloniex.com/public?command=returnOrderBook&currencyPair=BTC_BCN&depth=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - poloniex.com
+      User-Agent:
+      - http.rb/1.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 14 Dec 2017 23:45:18 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Set-Cookie:
+      - __cfduid=d69e85e8708d72d809e5a08ebe7e65cc51513295118; expires=Fri, 14-Dec-18
+        23:45:18 GMT; path=/; domain=.poloniex.com; HttpOnly
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 3cd509388ba92f2f-MAD
+    body:
+      encoding: ASCII-8BIT
+      string: '{"asks":[["0.00000018",51264162.584428],["0.00000019",46847799.275167],["0.00000020",60387736.712056],["0.00000021",83461802.17824],["0.00000022",125223600.69192],["0.00000023",28942181.481127],["0.00000024",29295473.189234],["0.00000025",68415010.041064],["0.00000026",5776744.9193754],["0.00000027",6789539.845081]],"bids":[["0.00000017",34987505.217354],["0.00000016",134844934.60979],["0.00000015",137555359.14591],["0.00000014",32693265.353115],["0.00000013",9551609.1710577],["0.00000012",5407264.6646721],["0.00000011",4684882.8571289],["0.00000010",25781535.497381],["0.00000009",2943080.6969697],["0.00000008",1658255.2989654]],"isFrozen":"0","seq":6510275}'
+    http_version: 
+  recorded_at: Thu, 14 Dec 2017 23:45:18 GMT
+recorded_with: VCR 3.0.3
