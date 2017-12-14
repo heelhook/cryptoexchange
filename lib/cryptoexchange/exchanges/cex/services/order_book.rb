@@ -23,8 +23,8 @@ module Cryptoexchange::Exchanges
           order_book.base      = market_pair.base
           order_book.target    = market_pair.target
           order_book.market    = Cex::Market::NAME
-          order_book.asks      = adapt_orders output['asks']
-          order_book.bids      = adapt_orders output['bids']
+          order_book.asks      = adapt_orders output['asks'] if output['asks']
+          order_book.bids      = adapt_orders output['bids'] if output['bids']
           order_book.timestamp = output['timestamp']
           order_book.payload   = output
           order_book
