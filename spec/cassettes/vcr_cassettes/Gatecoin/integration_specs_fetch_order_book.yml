@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.gatecoin.com/Public/MarketDepth/BTCEUR
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.gatecoin.com
+      User-Agent:
+      - http.rb/1.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 14 Dec 2017 13:47:04 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Set-Cookie:
+      - __cfduid=d6e31a80058f6911d125c075d507503431513259224; expires=Fri, 14-Dec-18
+        13:47:04 GMT; path=/; domain=.gatecoin.com; HttpOnly
+      Cache-Control:
+      - private
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 3cd19ce6bf9b2f8f-MAD
+    body:
+      encoding: ASCII-8BIT
+      string: '{"asks":[{"price":14699,"volume":0.01676},{"price":14900,"volume":0.17961598},{"price":14970,"volume":0.3213},{"price":14975,"volume":0.43},{"price":14999,"volume":0.29194},{"price":14999.9,"volume":0.02},{"price":15100,"volume":0.5139},{"price":15218,"volume":0.1},{"price":15436.9,"volume":0.01091000},{"price":15437,"volume":0.08},{"price":15449,"volume":0.09},{"price":15461,"volume":0.09},{"price":15473,"volume":0.077},{"price":15485,"volume":0.062},{"price":15497,"volume":0.04},{"price":15509,"volume":0.1},{"price":15521,"volume":0.02},{"price":15533,"volume":0.07},{"price":15545,"volume":0.03},{"price":15580,"volume":0.1},{"price":16000,"volume":0.05},{"price":17000,"volume":0.1},{"price":20000,"volume":0.03557},{"price":25890,"volume":0.16},{"price":610101,"volume":0.1}],"bids":[{"price":14400,"volume":0.12231564},{"price":14200,"volume":0.02033656},{"price":14000.1,"volume":2},{"price":14000,"volume":0.1},{"price":13910,"volume":0.00716399},{"price":13900,"volume":0.24952235},{"price":13890,"volume":0.02},{"price":13868.7,"volume":0.001},{"price":13818.7,"volume":0.001},{"price":13805.1,"volume":1.98872847},{"price":13805,"volume":0.94375826},{"price":13775,"volume":0.0877155},{"price":13768.7,"volume":0.001},{"price":13622,"volume":0.05},{"price":13612,"volume":0.097},{"price":13610,"volume":0.07},{"price":13602,"volume":0.023},{"price":13592,"volume":0.1},{"price":13582,"volume":0.04},{"price":13572,"volume":0.1},{"price":13562,"volume":0.030},{"price":13552,"volume":0.029},{"price":13542,"volume":0.09},{"price":13532,"volume":0.03},{"price":13500,"volume":0.01},{"price":13500,"volume":0.01845392},{"price":13002,"volume":0.03835905},{"price":12777,"volume":0.11698898},{"price":12501,"volume":0.4},{"price":12500,"volume":0.03188839},{"price":11500,"volume":0.91},{"price":11500,"volume":0.22},{"price":10800,"volume":0.08304268},{"price":10200,"volume":0.12},{"price":10000,"volume":5},{"price":10000,"volume":0.00065301},{"price":9900,"volume":0.00201315},{"price":9900,"volume":0.17011167},{"price":7500,"volume":0.03390798},{"price":7089,"volume":0.14083729},{"price":6850,"volume":0.34348102},{"price":6501,"volume":0.29845405},{"price":6200,"volume":0.38216082},{"price":5700,"volume":40},{"price":5000,"volume":0.59790732},{"price":3000,"volume":0.9965122},{"price":2000,"volume":0.00459392},{"price":10,"volume":0.0006773},{"price":10,"volume":0.00065194},{"price":0.1,"volume":2.8898854}],"responseStatus":{"message":"OK"}}'
+    http_version: 
+  recorded_at: Thu, 14 Dec 2017 13:47:04 GMT
+recorded_with: VCR 3.0.3
