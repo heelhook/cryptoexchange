@@ -22,7 +22,7 @@ module Cryptoexchange::Exchanges
         def adapt(output, market_pair)
           order_book = Cryptoexchange::Models::OrderBook.new
 
-          output = output['result']["#{market_pair.base}#{market_pair.target}"]
+          output = output['result'].values[0]
 
           order_book.base = market_pair.base
           order_book.target = market_pair.target
