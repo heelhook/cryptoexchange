@@ -1,4 +1,8 @@
 :pairs:
+  - :base: DASH
+    :target: USD
+  - :base: XRP
+    :target: USD
   - :base: BCC
     :target: USD
   - :base: BCC
@@ -17,6 +21,10 @@
     :target: BTC
   - :base: ETH
     :target: USD
+  - :base: DASH
+    :target: EUR
+  - :base: XRP
+    :target: EUR
   - :base: ETH
     :target: EUR
   - :base: ETH
