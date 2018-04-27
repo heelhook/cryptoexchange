@@ -2,7 +2,7 @@ module Cryptoexchange::Exchanges
   module Bitflyer
     module Services
       class Pairs < Cryptoexchange::Services::Pairs
-        PAIRS_URL = "#{Cryptoexchange::Exchanges::Bitflyer::Market::API_URL}/markets"
+        PAIRS_URL = "#{Cryptoexchange::Exchanges::Bitflyer::Market::API_URL}/markets/eu"
 
         def fetch
           output = super
