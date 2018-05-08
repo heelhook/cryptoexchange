@@ -1,5 +1,5 @@
 module Cryptoexchange::Exchanges
-  module Poloniex
+  module Therocktrading
     module Services
       class OrderBook < Cryptoexchange::Services::Market
         class << self
@@ -14,8 +14,9 @@ module Cryptoexchange::Exchanges
         end
 
         def ticker_url(market_pair)
-          p "#{Cryptoexchange::Exchanges::Poloniex::Market::API_URL}?command=returnOrderBook&currencyPair=#{market_pair.base}_#{market_pair.target}&depth=10"
-          "#{Cryptoexchange::Exchanges::Poloniex::Market::API_URL}?command=returnOrderBook&currencyPair=#{market_pair.base}_#{market_pair.target}&depth=10"
+          base = market_pair.base
+          target = market_pair.target
+          "#{Cryptoexchange::Exchanges::Therocktrading::Market::API_URL}/funds/#{base}#{target}/orderbook"
         end
 
         def adapt(output, market_pair)
@@ -23,9 +24,9 @@ module Cryptoexchange::Exchanges
 
           order_book.base = market_pair.base
           order_book.target = market_pair.target
-          order_book.market = Poloniex::Market::NAME
-          order_book.asks = adapt_orders output['asks'] if output['asks']
-          order_book.bids = adapt_orders output['bids'] if output['bids']
+          order_book.market = Bitbay::Market::NAME
+          order_book.asks = adapt_orders output['asks'] if output && output['asks']
+          order_book.bids = adapt_orders output['bids'] if output && output['bids']
           order_book.timestamp = Time.now.to_i
           order_book.payload = output
           order_book

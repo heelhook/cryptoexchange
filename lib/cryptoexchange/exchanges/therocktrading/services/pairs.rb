@@ -2,7 +2,7 @@ module Cryptoexchange::Exchanges
   module Therocktrading
     module Services
       class Pairs < Cryptoexchange::Services::Pairs
-        PAIRS_URL = "#{Cryptoexchange::Exchanges::Therocktrading::Market::API_URL}/tickers"
+        PAIRS_URL = "#{Cryptoexchange::Exchanges::Therocktrading::Market::API_URL}/funds/tickers"
 
         def fetch
           output = super
@@ -11,9 +11,9 @@ module Cryptoexchange::Exchanges
 
         def adapt(output)
           market_pairs = []
-          tickers = output['result']['tickers']
-          tickers.each_key do |pair|
-            base, target = pair[0,3], pair[3,6]
+          tickers = output['tickers']
+          tickers.each do |pair|
+            base, target = pair['fund_id'][0,3], pair['fund_id'][3..-1]
             market_pairs << Cryptoexchange::Models::MarketPair.new(
                               base: base,
                               target: target,
