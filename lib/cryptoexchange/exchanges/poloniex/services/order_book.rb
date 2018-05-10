@@ -14,7 +14,6 @@ module Cryptoexchange::Exchanges
         end
 
         def ticker_url(market_pair)
-          p "#{Cryptoexchange::Exchanges::Poloniex::Market::API_URL}?command=returnOrderBook&currencyPair=#{market_pair.base}_#{market_pair.target}&depth=10"
           "#{Cryptoexchange::Exchanges::Poloniex::Market::API_URL}?command=returnOrderBook&currencyPair=#{market_pair.base}_#{market_pair.target}&depth=10"
         end
 
