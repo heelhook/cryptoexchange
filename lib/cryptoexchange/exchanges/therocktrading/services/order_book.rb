@@ -16,7 +16,7 @@ module Cryptoexchange::Exchanges
         def ticker_url(market_pair)
           base = market_pair.base
           target = market_pair.target
-          "#{Cryptoexchange::Exchanges::Therocktrading::Market::API_URL}/funds/#{base}#{target}/orderbook"
+          "#{Cryptoexchange::Exchanges::Therocktrading::Market::API_URL}/funds/#{base}#{target}/orderbook?limit=10"
         end
 
         def adapt(output, market_pair)
